@@ -2,6 +2,13 @@
 
 Work in Progress
 
+## Installation
+
+This project is available via PyPi, you just need to run this command above
+```
+$ pip install twittersdk
+```
+
 ## TODO
 
 ### Follow, search and get users
