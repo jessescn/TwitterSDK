@@ -1,5 +1,7 @@
-
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from distutils.core import setup
+
 setup(
   name = 'TwitterSDK',         # How you named your package folder (MyLib)
   packages = ['TwitterSDK'],   # Chose the same as "name"
@@ -9,7 +11,7 @@ setup(
   author = 'Jessé Souza',                   # Type in your name
   author_email = 'jesse.neto@ccc.ufcg.edu.br',      # Type in your E-Mail
   url = 'https://github.com/user/jessescn',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/user/reponame/archive/v_01.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/jessescn/TwitterSDK/archive/0.1.tar.gz',    # I explain this later on
   keywords = ['Twitter', 'API','Python', 'SDK'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'requests'
@@ -23,5 +25,5 @@ setup(
     'Programming Language :: Python :: 3.4',
     'Programming Language :: Python :: 3.5',
     'Programming Language :: Python :: 3.6',
-  ],
+  ]
 )
