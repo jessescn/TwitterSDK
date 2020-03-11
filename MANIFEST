@@ -4,3 +4,4 @@ setup.py
 TwitterSDK/__init__.py
 TwitterSDK/auth.py
 TwitterSDK/twitter.py
+TwitterSDK/utils.py

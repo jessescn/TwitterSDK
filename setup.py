@@ -2,14 +2,13 @@
 # -*- coding: utf-8 -*-
 from distutils.core import setup
 
-with open('README.md', 'r') as fh:
-  LONG_DESCRIPTION = fh.read()
-
 DESCRIPTION = 'A Twitter SDK to help API consume.'
 URL = 'https://github.com/user/jessescn'
-DOWNLOAD_URL = 'https://github.com/jessescn/TwitterSDK/archive/0.1.tar.gz'
+DOWNLOAD_URL = 'https://github.com/jessescn/TwitterSDK/archive/0.2.zip'
 
-VERSION = '0.0.1'
+LONG_DESCRIPTION = None
+
+VERSION = '0.2'
 
 CLASSIFIERS = [
     'Development Status :: 3 - Alpha',
@@ -29,7 +28,6 @@ setup(
   license='MIT',
   description=DESCRIPTION,
   long_description=LONG_DESCRIPTION,
-  long_description_content_type='text/markdown',
   author='Jessé Souza',
   author_email='jesse.neto@ccc.ufcg.edu.br',
   url=URL,
