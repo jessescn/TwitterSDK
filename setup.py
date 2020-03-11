@@ -8,7 +8,7 @@ DOWNLOAD_URL = 'https://github.com/jessescn/TwitterSDK/archive/0.0.3.zip'
 
 LONG_DESCRIPTION = "With this SDK you can consume the twitter API in a abstract and encapsulated way. Twitter Developer account is all you need to start creating your applications consuming this Twitter SDK."
 
-VERSION = '0.0.3'
+VERSION = '0.0.4'
 
 CLASSIFIERS = [
     'Development Status :: 3 - Alpha',
