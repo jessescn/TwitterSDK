@@ -1,2 +1,2 @@
-from TwitterSDK.twitter import Twitter
-from TwitterSDK.auth import OAuth2Handler
+from .twitter import Twitter
+from .auth import OAuth2Handler
