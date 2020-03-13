@@ -7,9 +7,7 @@ class OAuth2Handler:
     api_url = "https://api.twitter.com/oauth2/token"
 
     def __init__(self, consumer_key, consumer_secret_key):
-        self.consumer_key = consumer_key
-        self.consumer_secret_key = consumer_secret_key
-        credentials = '{}:{}'.format(self.consumer_key, self.consumer_secret_key).encode()
+        credentials = '{}:{}'.format(consumer_key, consumer_secret_key).encode()
         self.credentialsEncoded = base64.b64encode(credentials).decode()
     
     def getToken(self):

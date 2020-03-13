@@ -4,7 +4,7 @@ from distutils.core import setup
 
 DESCRIPTION = 'A Twitter SDK to help API consume.'
 URL = 'https://github.com/user/jessescn'
-DOWNLOAD_URL = 'https://github.com/jessescn/TwitterSDK/archive/0.0.3.zip'
+DOWNLOAD_URL = 'https://github.com/jessescn/TwitterSDK/archive/0.0.4.zip'
 
 LONG_DESCRIPTION = "With this SDK you can consume the twitter API in a abstract and encapsulated way. Twitter Developer account is all you need to start creating your applications consuming this Twitter SDK."
 

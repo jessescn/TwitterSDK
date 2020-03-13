@@ -3,5 +3,7 @@ setup.cfg
 setup.py
 TwitterSDK/__init__.py
 TwitterSDK/auth.py
+TwitterSDK/manage_users.py
+TwitterSDK/manipulate_tweets.py
 TwitterSDK/twitter.py
 TwitterSDK/utils.py
