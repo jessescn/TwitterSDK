@@ -16,6 +16,18 @@ class Twitter:
         """
         return self.manipulateTweets.getUserTimeline(screen_name=screen_name, user_id=user_id, count=count, trim_user=trim_user, exclude_replies=exclude_replies, include_rts=include_rts)
 
+    def getUserHomeTimeline(self, count=None, since_id=None, max_id=None, trim_user=None, exclude_replies=None, include_entities=None):
+        """
+        GET statuses/home_timeline
+        """
+        return self.manipulateTweets.getHomeTimeline(count=count, since_id=since_id, max_id=max_id, trim_user=trim_user, exclude_replies=exclude_replies, include_entities=include_entities)
+
+    def getMentionsTimeline(self, count=None, since_id=None, max_id=None, trim_user=None, include_entities=None):
+        """
+        GET statuses/mentions_timeline
+        """
+        return self.manipulateTweets.getMentionsTimeline(count=count, since_id=since_id, max_id=max_id, trim_user=trim_user, include_entities=include_entities)
+
     def getUsersLookup(self, screen_name=None, user_id=None, include_entities=None, tweet_mode=None):
         """
         GET users/lookup

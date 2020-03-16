@@ -26,8 +26,8 @@ List of methods in this [Twitter API session page](https://developer.twitter.com
 
 - Tweets
 * [x] GET statuses/user_timeline
-* [ ] GET statuses/home_timeline
-* [ ] GET statuses/mentions_timeline
+* [x] GET statuses/home_timeline
+* [x] GET statuses/mentions_timeline (user context only)
 * [ ] POST statuses/update]
 * [ ] POST statuses/destroy/:id
 * [ ] GET statuses/show/:id
