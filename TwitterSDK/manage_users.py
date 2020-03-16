@@ -1,10 +1,9 @@
-import requests
 from .utils import createQuery, handleShouldBeList
 
 class ManageUsers():
 
-    def __init__(self, header, api_url):
-        self.header = header
+    def __init__(self, session, api_url):
+        self.session = session
         self.api_url = api_url
 
     # GET Followers/ids and GET followers/list
@@ -33,7 +32,7 @@ class ManageUsers():
         query = "ids.json" if return_type == "id" else "list.json"
         query += createQuery(params)
 
-        response = requests.get(uri + query, headers=self.header).json()
+        response = self.session.get(uri + query).json()
         return response
  
     # GET friends/ids and GET friends/list
@@ -61,7 +60,7 @@ class ManageUsers():
         query = "ids.json" if return_type == "id" else "list.json"
         query += createQuery(params)
     
-        response = requests.get(uri + query, headers=self.header).json()
+        response = self.session.get(uri + query).json()
         return response
 
     # GET users/lookup
@@ -86,7 +85,7 @@ class ManageUsers():
         query = createQuery(params)
         uri = self.api_url + '/users/lookup.json'
 
-        response = requests.post(uri + query, headers=self.header).json()
+        response = self.session.post(uri + query).json()
         return response
 
     # GET users/show

@@ -1,10 +1,9 @@
-import requests
 from .utils import createQuery, handleShouldBeList
 
 class ManipulateTweets():
 
-    def __init__(self, header, api_url):
-        self.header = header
+    def __init__(self, session, api_url):
+        self.session = session
         self.api_url = api_url
         
     # GET statuses/user_timeline
@@ -31,12 +30,11 @@ class ManipulateTweets():
 
         query = createQuery(params)
 
-        response = requests.get(uri + query, headers=self.header).json()
+        response = self.session.get(uri + query).json()
         return response
 
 
     def getFavorites(self, **kwargs):
-
 
         screen_name = kwargs.get('screen_name')
         user_id = kwargs.get('user_id')
@@ -57,5 +55,5 @@ class ManipulateTweets():
         
         query = createQuery(params)
 
-        response = requests.get(uri + query, headers=self.header).json()
+        response = self.session.get(uri + query).json()
         return response

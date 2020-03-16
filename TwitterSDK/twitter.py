@@ -6,11 +6,9 @@ class Twitter:
     
     api_url = "https://api.twitter.com/1.1"
 
-    def __init__(self, auth):
-        token = auth.getToken()
-        header = getAuthHeaders(token)
-        self.manageUsers = ManageUsers(header, self.api_url)
-        self.manipulateTweets = ManipulateTweets(header, self.api_url)
+    def __init__(self, session):
+        self.manageUsers = ManageUsers(session, self.api_url)
+        self.manipulateTweets = ManipulateTweets(session, self.api_url)
 
     def getUserTimeline(self, screen_name=None, user_id=None, count=None, trim_user=None, exclude_replies=None, include_rts=None):
         """

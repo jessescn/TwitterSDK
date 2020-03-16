@@ -34,6 +34,6 @@ setup(
   url=URL,
   download_url=DOWNLOAD_URL,
   keywords=['Twitter', 'API','Python', 'SDK'],
-  install_requires=['requests'],
+  install_requires=['requests', 'requests-oauthlib'],
   classifiers=CLASSIFIERS
 )

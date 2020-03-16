@@ -1,2 +1,2 @@
 from .twitter import Twitter
-from .auth import OAuth2Handler
+from .auth import OAuth2Handler, Oauth1Handler
