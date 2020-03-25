@@ -57,3 +57,21 @@ class Twitter:
         GET favorites/list
         """
         return self.manipulateTweets.getFavorites(screen_name=screen_name, user_id=user_id, count=count, since_id=since_id, max_id=max_id, include_entities=include_entities)
+
+    def getFriendshipsIncoming(self, cursor=None, stringify_ids=None):
+        """
+        GET friendships/incoming
+        """
+        return self.manageUsers.getFriendshipsIncoming(cursor=cursor, stringify_ids=stringify_ids)
+
+    def getFriendshipsLookup(self, screen_name=None, user_id=None):
+        """
+        GET friendships/lookup
+        """
+        return self.manageUsers.getFriendshipsLookup(screen_name=screen_name, user_id=user_id)
+
+    def getFriendshipsNotRetweets(self, stringify_ids=False):
+        """
+        GET friendships/no_retweets/ids
+        """
+        return self.manageUsers.getFriendshipsNotRetweets(stringify_ids=stringify_ids)

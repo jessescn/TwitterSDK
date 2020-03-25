@@ -99,3 +99,52 @@ class ManageUsers():
         
         return self.getUsersLookup(screen_name=screen_name, user_id=user_id, include_entities=include_entities)
 
+    # GET friendships/incoming
+    def getFriendshipsIncoming(self, **kwargs):
+        """
+        Get a list of every user who have a pending request to follow the authenticating user
+        """
+        params = {
+            "cursor": kwargs.get("cursor", None),
+            "stringify_ids": kwargs.get("stringify_ids", None)
+        }
+
+        query = createQuery(params)
+        uri = self.api_url + '/friendships/incoming.json'
+        response = self.session.get(uri + query).json()
+        return response
+
+    # GET friendships/lookup
+    def getFriendshipsLookup(self, **kwargs):
+        """
+        Returns the relationships between authenticating user and a comma-separared list of up to 100 users (screen_name or ids)   
+        """
+        screen_name = handleShouldBeList(kwargs.get('screen_name', None))
+        user_id = handleShouldBeList(kwargs.get('user_id', None))
+
+        params = {}
+
+        if screen_name:
+            params['screen_name'] = ','.join(screen_name)
+
+        if user_id:
+            params['user_id'] = ','.join(str(uid) for uid in user_id)
+
+        query = createQuery(params)
+        uri = self.api_url + "/friendships/lookup.json"
+        response = self.session.get(uri + query).json()
+        return response
+
+    # GET friendships/no_retweets/ids
+    def getFriendshipsNotRetweets(self, **kwargs):
+        """
+        Returns a list of user_ids that the authenticating user does not want to receive retweets from  
+        """
+        params = {
+            "stringify_ids": kwargs.get('stringify_ids', False)
+        }
+
+        query = createQuery(params)
+        uri = self.api_url + '/friendships/no_retweets/ids.json'
+        response = self.session.get(uri + query).json()
+        return response

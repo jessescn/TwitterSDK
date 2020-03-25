@@ -1,4 +1,6 @@
-### Follow, search and get users
+# Methods Mapped (implemented/not implemented)
+
+## Follow, search and get users
 
 List of methods in this [Twitter API session page](https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/get-users-lookup).
 
@@ -6,9 +8,9 @@ List of methods in this [Twitter API session page](https://developer.twitter.com
 * [x] GET friends/list
 * [x] GET followers/ids
 * [x] GET followers/list
-* [ ] GET friendships/incoming (user context only)
-* [ ] GET friendships/lookup (user context only)
-* [ ] GET friendships/no_retweets/ids (user context only)
+* [x] GET friendships/incoming (user context only)
+* [X] GET friendships/lookup (user context only)
+* [x] GET friendships/no_retweets/ids (user context only)
 * [ ] GET friendships/outgoing (user context only)
 * [ ] GET friendships/show (user context only)
 * [x] GET users/lookup
@@ -20,11 +22,12 @@ List of methods in this [Twitter API session page](https://developer.twitter.com
 
 * (user context only) - Only available using user Third-Party Auth
 
-### Tweets
+## Tweets
 
 List of methods in this [Twitter API session page](https://developer.twitter.com/en/docs/tweets/timelines/overview).
 
-- Tweets
+-> Tweets
+
 * [x] GET statuses/user_timeline
 * [x] GET statuses/home_timeline
 * [x] GET statuses/mentions_timeline (user context only)
@@ -34,14 +37,16 @@ List of methods in this [Twitter API session page](https://developer.twitter.com
 * [ ] GET statuses/oembed
 * [ ] GET statuses/lookup
 
-- Retweets
+-> Retweets
+
 * [ ] POST statuses/retweet/:id
 * [ ] POST statueses/unretweet/:id
 * [ ] GET statuses/retweets/:id
 * [ ] GET statuses/retweets_of_me
 * [ ] GET statuses/retweets/ids
 
-- Likes (formely favorites)
+-> Likes (formely favorites)
+
 * [ ] POST favorites/create/:id
 * [ ] POST favorites/destroy/:id
 * [x] GET favorites/list
